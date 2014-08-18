@@ -33,7 +33,7 @@ int main(void) {
 	scene.prepare();
 
 	Shader shader;
-	shader.loadShader("shaders/simple.v.glsl", "shaders/simple.f.glsl");
+	shader.loadShader("colored.v.glsl", "colored.f.glsl");
 	if (!shader.ready()) {
 		fprintf(stderr, "Failed to load shader \n");
 	}
@@ -49,7 +49,7 @@ int main(void) {
 
 
 	while (!glfwWindowShouldClose(window)) {
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		shader.use();
 		

@@ -26,6 +26,10 @@ public:
 		glUniformMatrix4fv(glGetUniformLocation(_program, pointer), 1, GL_FALSE, &mat[0][0]);
 	}
 
+	GLuint program() const {
+		return _program;
+	}
+
 private:
 	GLint _ready = GL_FALSE;
 	GLuint _program;

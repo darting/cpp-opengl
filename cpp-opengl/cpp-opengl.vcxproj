@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\cpp\glfw-3.0.4.bin.WIN32\include;D:\cpp\glew-1.11.0\include;D:\cpp\glm;$(IncludePath)</IncludePath>
+    <IncludePath>D:\cpp\glfw-3.0.4.bin.WIN32\include;D:\cpp\glew-1.11.0\include;D:\cpp\glm;D:\resouces\github\cpp-opengl\core;$(IncludePath)</IncludePath>
     <LibraryPath>D:\cpp\glfw-3.0.4.bin.WIN32\lib-msvc120;D:\cpp\glew-1.11.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -74,7 +74,9 @@
     <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="colored.f.glsl" />
+    <None Include="colored.f.glsl">
+      <FileType>Text</FileType>
+    </None>
     <None Include="colored.v.glsl" />
     <None Include="glew32.dll" />
     <None Include="glfw3.dll" />
@@ -83,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ColoredCube.h" />
-    <ClInclude Include="Common.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
   </ItemGroup>

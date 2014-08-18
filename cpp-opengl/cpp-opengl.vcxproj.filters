@@ -14,7 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="shaders">
-      <UniqueIdentifier>{8f335a2e-8b25-4d44-9a19-464d43c354fb}</UniqueIdentifier>
+      <UniqueIdentifier>{f1f2c2f2-841d-4812-82df-ef3d583d5105}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,10 +34,10 @@
   <ItemGroup>
     <None Include="glew32.dll" />
     <None Include="glfw3.dll" />
-    <None Include="simple.v.glsl">
+    <None Include="simple.f.glsl">
       <Filter>shaders</Filter>
     </None>
-    <None Include="simple.f.glsl">
+    <None Include="simple.v.glsl">
       <Filter>shaders</Filter>
     </None>
     <None Include="colored.v.glsl">
@@ -52,9 +52,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ColoredCube.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
