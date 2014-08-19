@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Common.h"
+#include "render/OpenGL3Context.h"
+#include "render/Shader.h"
+
 #include "Scene.h"
 #include "ColoredCube.h"
-#include "OpenGL3Context.h"
-#include "Shader.h"
 
 #define _WIN32
 
