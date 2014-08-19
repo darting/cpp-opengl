@@ -4,8 +4,12 @@
 #include "Scene.h"
 #include "ColoredCube.h"
 #include "Shader.h"
+#include "OpenGL3Context.h"
+
+
 
 int main(void) {
+
 	GLFWwindow* window;
 
 	if (!glfwInit())
@@ -67,5 +71,12 @@ int main(void) {
 	shader.dispose();
 
 	glfwTerminate();
+
+
 	return 0;
 }
+
+
+
+
+

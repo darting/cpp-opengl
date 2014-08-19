@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Common.h"
-#include "ProgramInputs.h"
 
 
 class OpenGL3Context :
 	public std::enable_shared_from_this <OpenGL3Context> {
+
 public:
 	typedef std::shared_ptr<OpenGL3Context> Ptr;
 	~OpenGL3Context();
@@ -54,6 +54,8 @@ public:
 
 	const uint createProgram();
 
+	string getProgramInfoLogs(const uint program);
+
 	void attachShader(const uint program, const uint shader);
 
 	void linkProgram(const uint program);
@@ -76,12 +78,46 @@ public:
 
 	void deleteFragmentShader(const uint fragmentShader);
 
-
 	std::shared_ptr<ProgramInputs> getProgramInputs(const uint program);
 
+	void fillUniformInputs(const uint program, std::vector<string>& names, std::vector<uint>& types, std::vector<uint>& locations);
 
+	void fillAttributeInputs(const uint program, std::vector<string>& names, std::vector<uint>& types, std::vector<uint>& locations);
+
+	string getShaderCompilationLogs(const uint shader);
+
+protected:
+	OpenGL3Context();
+
+	// copy constructor
+	// move constructor
+
+	inline void checkForErrors();
+	unsigned int getError();
 
 private:
-	bool _errorsEnabled = true;
+	bool _ready;
+	bool _errorsEnabled;
+	bool _currentDepthMask;
+	uint _viewportX;
+	uint _viewportY;
+	uint _viewportWidth;
+	uint _viewportHeight;
+
+
+	std::list<uint> _vertexBuffers;
+	std::list<uint> _indexBuffers;
+	std::list<uint> _programs;
+	std::list<uint> _vertexShaders;
+	std::list<uint> _fragmentShaders;
+
+	int _currentIndexBuffer;
+	std::vector<int> _currentVertexBuffer;
+	std::vector<int> _currentVertexSize;
+	std::vector<int> _currentVertexStride;
+	std::vector<int> _currentVertexOffset;
+	int _currentProgram;
+	
+
 };
 

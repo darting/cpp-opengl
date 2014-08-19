@@ -41,6 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>D:\cpp\glfw-3.0.4.bin.WIN32\include;D:\cpp\glew-1.11.0\include;D:\cpp\glm;D:\resouces\github\cpp-opengl\core;$(IncludePath)</IncludePath>
     <LibraryPath>D:\cpp\glfw-3.0.4.bin.WIN32\lib-msvc120;D:\cpp\glew-1.11.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+    <SourcePath>D:\resouces\github\cpp-opengl\core;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
