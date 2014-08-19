@@ -6,7 +6,7 @@
 #include "OpenGL3Context.h"
 #include "Shader.h"
 
-
+#define _WIN32
 
 using namespace orange::render;
 
@@ -30,12 +30,13 @@ int main(void) {
 
 	glfwMakeContextCurrent(window);
 	glewExperimental = true;
-	if (glewInit() != GLEW_OK) {
-		fprintf(stderr, "Failed to initialize GLEW \n");
-		return -1;
-	}
 
 	auto context = OpenGL3Context::create();
+
+	if (!context->ready()) {
+		fprintf(stderr, "Failed to initialize Context \n");
+		return -1;
+	}
 
 	ColoredCube scene;
 	scene.prepare();

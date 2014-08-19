@@ -91,6 +91,8 @@ namespace orange {
 
 			string getShaderCompilationLogs(const uint shader);
 
+			const bool ready() { return _ready;  }
+
 			// uniform
 
 			void setUniform(uint location, mat4 mat);
