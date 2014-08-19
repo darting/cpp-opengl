@@ -13,6 +13,7 @@
 #include <fstream>
 #include <memory>
 #include <unordered_map>
+#include <tuple>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

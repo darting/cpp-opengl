@@ -69,14 +69,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\geometry\Geometry.h" />
     <ClInclude Include="include\Common.h" />
     <ClInclude Include="include\render\OpenGL3Context.h" />
     <ClInclude Include="include\render\ProgramInputs.h" />
     <ClInclude Include="include\render\Shader.h" />
+    <ClInclude Include="include\render\VertexBuffer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\geometry\Geometry.cpp" />
     <ClCompile Include="source\render\OpenGL3Context.cpp" />
     <ClCompile Include="source\render\Shader.cpp" />
+    <ClCompile Include="source\render\VertexBuffer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
