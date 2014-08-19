@@ -379,3 +379,7 @@ inline void OpenGL3Context::checkForErrors() {
 	}
 #endif // DEBUG
 }
+
+void OpenGL3Context::setUniform(uint location, mat4 mat) {
+	glUniformMatrix4fv(location, 1, GL_FALSE, &mat[0][0]);
+}

@@ -3,8 +3,9 @@
 #include "Common.h"
 #include "Scene.h"
 #include "ColoredCube.h"
-#include "Shader.h"
 #include "OpenGL3Context.h"
+#include "Shader.h"
+
 
 
 using namespace orange::render;
@@ -39,11 +40,10 @@ int main(void) {
 	ColoredCube scene;
 	scene.prepare();
 
-	Shader shader;
-	shader.loadShader("colored.v.glsl", "colored.f.glsl");
-	if (!shader.ready()) {
-		fprintf(stderr, "Failed to load shader \n");
-	}
+	Shader::Ptr shader = Shader::create(context, "colored");
+	
+
+
 
 	mat4 model(1.0f);
 	mat4 projection = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f);
@@ -58,9 +58,9 @@ int main(void) {
 	while (!glfwWindowShouldClose(window)) {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		shader.use();
-		
-		shader.unifrom("MVP", mvp);
+		context->setProgram(shader->program());
+
+		shader->setUniform("MVP", mvp);
 
 		scene.bind();
 		scene.draw();
@@ -71,7 +71,6 @@ int main(void) {
 	}
 
 	scene.dispose();
-	shader.dispose();
 
 	glfwTerminate();
 

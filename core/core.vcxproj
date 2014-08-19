@@ -71,10 +71,11 @@
     <ClInclude Include="Common.h" />
     <ClInclude Include="OpenGL3Context.h" />
     <ClInclude Include="ProgramInputs.h" />
+    <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL3Context.cpp" />
-    <ClCompile Include="ProgramInputs.cpp" />
+    <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

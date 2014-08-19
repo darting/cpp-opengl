@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>D:\cpp\glfw-3.0.4.bin.WIN32\include;D:\cpp\glew-1.11.0\include;D:\cpp\glm;D:\resouces\github\cpp-opengl\core;$(IncludePath)</IncludePath>
     <LibraryPath>D:\cpp\glfw-3.0.4.bin.WIN32\lib-msvc120;D:\cpp\glew-1.11.0\lib\Release\Win32;D:\resouces\github\cpp-opengl\cpp-opengl\Debug;$(LibraryPath)</LibraryPath>
-    <SourcePath>D:\resouces\github\cpp-opengl\core;$(SourcePath)</SourcePath>
+    <SourcePath>$(SourcePath)</SourcePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -73,7 +73,6 @@
     <ClCompile Include="ColoredCube.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="colored.f.glsl">
@@ -88,7 +87,6 @@
   <ItemGroup>
     <ClInclude Include="ColoredCube.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\core\core.vcxproj">

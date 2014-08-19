@@ -91,6 +91,10 @@ namespace orange {
 
 			string getShaderCompilationLogs(const uint shader);
 
+			// uniform
+
+			void setUniform(uint location, mat4 mat);
+
 		protected:
 			OpenGL3Context();
 
