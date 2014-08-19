@@ -7,6 +7,7 @@
 #include "OpenGL3Context.h"
 
 
+using namespace orange::render;
 
 int main(void) {
 
@@ -32,6 +33,8 @@ int main(void) {
 		fprintf(stderr, "Failed to initialize GLEW \n");
 		return -1;
 	}
+
+	auto context = OpenGL3Context::create();
 
 	ColoredCube scene;
 	scene.prepare();

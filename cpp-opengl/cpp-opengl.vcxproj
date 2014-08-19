@@ -40,8 +40,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>D:\cpp\glfw-3.0.4.bin.WIN32\include;D:\cpp\glew-1.11.0\include;D:\cpp\glm;D:\resouces\github\cpp-opengl\core;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\cpp\glfw-3.0.4.bin.WIN32\lib-msvc120;D:\cpp\glew-1.11.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\cpp\glfw-3.0.4.bin.WIN32\lib-msvc120;D:\cpp\glew-1.11.0\lib\Release\Win32;D:\resouces\github\cpp-opengl\cpp-opengl\Debug;$(LibraryPath)</LibraryPath>
     <SourcePath>D:\resouces\github\cpp-opengl\core;$(SourcePath)</SourcePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -88,6 +89,11 @@
     <ClInclude Include="ColoredCube.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\core.vcxproj">
+      <Project>{89620f82-66c9-4461-98cb-f24f3f275e43}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

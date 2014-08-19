@@ -1,7 +1,6 @@
 #pragma once
 
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -21,5 +20,10 @@
 using std::string;
 using namespace glm;
 
-class OpenGL3Context;
-class ProgramInputs;
+namespace orange {
+	namespace render {
+		class OpenGL3Context;
+		class ProgramInputs;
+	}
+}
+

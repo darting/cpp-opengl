@@ -1,7 +1,7 @@
 #include "OpenGL3Context.h"
 
-
-
+using namespace orange;
+using namespace orange::render;
 
 OpenGL3Context::OpenGL3Context() :
 _ready(false),
@@ -122,7 +122,7 @@ void OpenGL3Context::setVertexBufferAt(const uint position, const uint vertexBuf
 		&& _currentVertexOffset[position] == position)
 		return;
 
-	_currentVertexBuffer[position] == vertexBuffer;
+	_currentVertexBuffer[position] = vertexBuffer;
 	_currentVertexSize[position] = size;
 	_currentVertexStride[position] = stride;
 	_currentVertexOffset[position] = position;
@@ -235,7 +235,7 @@ const uint OpenGL3Context::createVertexShader() {
 	return vertexShader;
 }
 
-void OpenGL3Context::deleteVertexBuffer(const uint vertexShader) {
+void OpenGL3Context::deleteVertexShader(const uint vertexShader) {
 	_vertexShaders.erase(std::find(_vertexShaders.begin(), _vertexShaders.end(), vertexShader));
 	glDeleteShader(vertexShader);
 	checkForErrors();
