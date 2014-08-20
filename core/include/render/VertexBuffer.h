@@ -2,10 +2,12 @@
 
 
 #include "Common.h"
+#include "AbstractResource.h"
 
 namespace orange {
 	namespace render {
 		class VertexBuffer :
+			public AbstractResource,
 			public std::enable_shared_from_this < VertexBuffer > {
 		public:
 			typedef std::shared_ptr<VertexBuffer> Ptr;
@@ -97,6 +99,12 @@ namespace orange {
 				std::vector<float>::const_iterator end);
 
 			VertexBuffer(std::shared_ptr<OpenGL3Context> context, float* begin, float* end);
+
+			void vertexSize(uint value);
+
+			void invalidatePositionBounds();
+
+			void updatePositionBounds();
 
 		private:
 			std::vector<float> _data;
